@@ -12,7 +12,7 @@ class RandomWalk():
 		'''Initialize attributes of a walk.'''
 		self.num_points = num_points
 		
-		# All walksare stored in a x or y list and  start at (0, 0).
+		# All walks are stored in a x or y list and start at (0, 0).
 		self.x_values = [0]
 		self.y_values = [0]
 		
@@ -40,6 +40,7 @@ class RandomWalk():
 			next_x = self.x_values[-1] + x_step
 			next_y = self.y_values[-1] + y_step
 			
+			# Once all steps are calculated append them to x and y list.
 			self.x_values.append(next_x)
 			self.y_values.append(next_y)
 			
