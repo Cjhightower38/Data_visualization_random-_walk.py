@@ -33,6 +33,15 @@ while True:
     plt.scatter(rw.x_values[-1], rw.y_values[-1], c = 'yellow',
         edgecolor = 'none', s = 100)
         
+    # Remove the axes.
+    # plt.axes().get_xaxis().set_visible(False)
+    # plt.axes().get_yaxis().set_visible(False)
+    '''
+    I could not get the above commad to turn the axes off so I found
+    a work around that gave me the same result.
+    '''
+    
+    plt.axis('off')
     plt.show()
     
     keep_running = input('Make another walk? (y/n): ')
