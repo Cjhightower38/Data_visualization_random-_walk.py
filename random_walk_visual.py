@@ -15,6 +15,9 @@ while True:
     
     rw = RandomWalk(50000)
     rw.fill_walk()
+    
+    # Set the size of the plotting window.
+    plt.figure(figsize = (14, 7))
 
     '''
     Scatters the x and y points with a point size of 15 and displays.
