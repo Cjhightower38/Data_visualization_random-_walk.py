@@ -9,21 +9,24 @@ while True:
 	
     '''
     Make a random walk, and plot the points. Abbreviates the RandomWalk()
-    and call fill_walk() to create and store the points generated.
+    and call fill_walk() to create and store the points generated. Add
+    a value of 50,000 to increase the number of points.
     '''
     
-    rw = RandomWalk()
+    rw = RandomWalk(50000)
     rw.fill_walk()
 
     '''
     Scatters the x and y points with a point size of 15 and displays.
     Store a list of numbers equal to the points in a walk in variable
-    (point_numbers)and remove the black outline around the points'
+    (point_numbers)and remove the black outline around the points. After
+    increasing the number of points to 50,000 in the RandomWalk()
+    insatnce low the dot size so it is easier to plot.
     '''
     
     point_numbers = list(range(rw.num_points))
     plt.scatter(rw.x_values, rw.y_values, c = point_numbers,
-        cmap = plt.cm.Reds, edgecolor = 'none', s = 15)
+        cmap = plt.cm.Reds, edgecolor = 'none', s = 1)
     '''  
       Emphasize the first and last points. Adding the start and end plot
       just before the call to plt.show() places them on top of the other
